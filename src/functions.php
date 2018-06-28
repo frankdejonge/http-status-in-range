@@ -13,5 +13,5 @@ function http_status_in_range(int $statusCode, int $range): bool {
 }
 
 function http_status_not_in_range(int $statusCode, int $range): bool {
-    return (($statusCode / 100) | 0) !== $range;
+    return !http_status_in_range($statusCode, $range);
 }
