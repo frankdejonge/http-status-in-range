@@ -16,6 +16,11 @@
             <directory suffix="Tests.php">./tests/</directory>
         </testsuite>
     </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/</directory>
+        </whitelist>
+    </filter>
     <logging>
         <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
         <log type="coverage-clover" target="coverage.xml" showUncoveredFiles="true"/>

@@ -9,7 +9,7 @@
     },
     "autoload": {
         "files": [
-            "./function.php"
+            "./src/functions.php"
         ]
     },
     "license": "MIT",
