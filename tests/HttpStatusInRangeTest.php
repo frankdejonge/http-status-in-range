@@ -3,7 +3,6 @@
 namespace FrankDeJonge\HttpStatusRange;
 
 use PHPUnit\Framework\TestCase;
-use function var_dump;
 
 class HttpStatusInRangeTest extends TestCase
 {
@@ -18,6 +17,20 @@ class HttpStatusInRangeTest extends TestCase
         }
         foreach ($bad as $statusCode) {
             $this->assertFalse(http_status_in_range($statusCode, $range));
+        }
+    }
+
+    /**
+     * @test
+     * @dataProvider statusInRange
+     */
+    public function status_is_detected_not_in_range(int $range, array $good, array $bad)
+    {
+        foreach ($good as $statusCode) {
+            $this->assertFalse(http_status_not_in_range($statusCode, $range));
+        }
+        foreach ($bad as $statusCode) {
+            $this->assertTrue(http_status_not_in_range($statusCode, $range));
         }
     }
 
