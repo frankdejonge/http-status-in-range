@@ -1,0 +1,22 @@
+{
+    "name": "frankdejonge/http-status-in-range",
+    "description": "Utility to check if a HTTP status code is present in a given range.",
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "autoload": {
+        "files": [
+            "./function.php"
+        ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frank de Jonge",
+            "email": "info@frenky.net"
+        }
+    ]
+}
