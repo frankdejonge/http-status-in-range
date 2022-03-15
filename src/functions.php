@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FrankDeJonge\HttpStatusRange;
 
 const HTTP_INFORMATIONAL = 1;
